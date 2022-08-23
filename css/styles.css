@@ -91,7 +91,7 @@ footer{
 .categoria img {
     height: 300px;
     width: 200px;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
 }
 #grilla2 {
     display: grid;
