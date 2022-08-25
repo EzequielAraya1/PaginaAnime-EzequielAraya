@@ -3,10 +3,15 @@
     margin: 0;
     padding: 0;
 }
+*, ::after, ::before {
+    box-sizing: none;
+}
 /* ----------------------------body---------------------------- */
 body {
     background: rgb(10, 10, 10);
     background: linear-gradient(0deg, rgb(29, 31, 31) 0%, rgb(0, 0, 0) 100%);
+    line-height: 1;
+    color: #030303;
 }
 /* ----------------------------nav--------------------------- */
 nav{
@@ -73,12 +78,8 @@ nav ul li a{
     border-radius: 10px;
 }
 /* -------------------------------------footer--------------------------------------------- */
-footer{
-    text-align: center;
-    font-family: "inter";
-    font-size: 16px;
-    font-weight: 300;
-    color: #000;
+.bgFooter {
+    background-color: #333333;
 }
 /* ---------------------------------------categoria------------------------------------------ */
 .categoria {
@@ -111,19 +112,31 @@ footer{
 .col7 {grid-area: col7;}
 .col8 {grid-area: col8;}
 /* ---------------------------------------------inicio-------------------------------------------------- */
-.idea {
-    background-image: url(/media/idea2.jpg);
-    width: 100%;
-    height: 500px;
+.cont__ideas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.idea img {
-    width: 600px;
-    height: 400px;
-    margin-left: 400px;
-    margin-top: 25px;
-    border: 5px;
-    border-color: #fff;
-    border-style: solid;
+.idea2 {
+    display: flex;
+    background-image: url(../media/lucifer.png);
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 500px;
+    margin-top: -200px;
+    align-items: center;
+    justify-content: center;
+
+}
+.idea2 p {
+    color: #fff;
+    margin-top: 400px;
+    font-size: 19px;
+    font-weight: 300;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 400px;
 }
 #grilla {
     display: grid;
@@ -166,6 +179,7 @@ footer{
 .recomendaciones {
     grid-area: recomendaciones;
     font-family: "Rubik Distressed";
+    font-size: 26px;
     width: 300;
     color: #fff;
     margin: 5%;
@@ -174,6 +188,7 @@ footer{
 .lo__mas__popular {
     grid-area: popular;
     font-family: "Rubik Distressed";
+    font-size: 26px;
     width: 300;
     color: #fff;
     margin: 5%;
@@ -189,35 +204,60 @@ footer{
 
 }
 .image-recomendaciones img {
-    /* margin-right: 10px;
-    margin-left: 130px; */
     margin-bottom: 25px;
     border: 2px;
     border-color: #fff;
     border-style: solid;
 }
-/* ----------------------------------contacto---------------------------------------------- */
-#formulario input {
-    display: block;
+.cardd {
+    position: relative;
     width: 300px;
-    height: 30px;
-    margin: 8px;
-    padding: 10px;
-    border: 2px;
-    border-color:#1568a7;
-    border-style: solid;
-    font-size: 18px;
+    height: 400px;
+    z-index: 1;
+    background-color: none;
 }
-#formulario textarea {
-    resize: none;
+
+.cardd .face {
+    position: absolute;
     width: 300px;
-    height: 100px;
-    margin: 8px;
-    padding: 10px;
-    font-size: 18px;
-    border: 3px;
-    border-color: #1568a7;
-    border-style: solid;
+    height: 400px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+}
+.cardd .front {
+    transform: perspective(600px) rotateY(0deg);
+}
+.cardd .back {
+    transform: perspective(600px) rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.521);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+}
+.cardd .back p{
+    color: #f3f3f3;
+}
+.cardd .back h3 {
+  position: relative;
+  top: -150px;
+  color: #f3f3f3;
+}
+
+.cardd:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.cardd:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/* ----------------------------------contacto---------------------------------------------- */
+.formularioo {
+    width: 500px;
+    color: #fff;
+}
+.formularioo {
 
 }
 /* ------------------------------tablet--------------------------------------- */
@@ -446,51 +486,8 @@ footer{
 
 }
 /* ----------------------------------------------------------------------------------- */
-
-
-.card {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    z-index: 1;
-}
-
-.card .face {
-    position: absolute;
-    width: 300px;
-    height: 400px;
-    backface-visibility: hidden;
-    /* border-radius: 10px; */
-    overflow: hidden;
-    transition: .5s;
-}
-.card .front {
-    transform: perspective(600px) rotateY(0deg);
-    /* box-shadow: 0px 5px 10px rgb(212, 23, 23); */
-    /* background: #2abdbb; */
-    /* width: 300px;
-    height: 400px; */
-}
-.card .back {
-    transform: perspective(600px) rotateY(180deg);
-    background-color: #fff;
-    /* padding: 15px; */
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align:center;
-    /* box-shadow: 0 5px px rgb(212, 23, 23); */
-}
-
-.card .back h3 {
-  position: relative;
-  top: -150px;
-}
-
-.card:hover .front{
-    transform: perspective(600px) rotateY(180deg);
-}
-.card:hover .back{
-    transform: perspective(600px) rotateY(360deg);
+/* --------------------------------------------------------------------------------------- */
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
 }
