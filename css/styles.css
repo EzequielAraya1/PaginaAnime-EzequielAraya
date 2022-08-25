@@ -23,6 +23,10 @@ nav{
 nav ul{
     text-align: center;
 }
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 nav ul li{
     display: inline;
     margin-right: 20px;
@@ -487,7 +491,4 @@ nav ul li a{
 }
 /* ----------------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------------------- */
-dl, ol, ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+
