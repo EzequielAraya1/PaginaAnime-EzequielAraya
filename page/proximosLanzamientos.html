@@ -10,15 +10,20 @@
         <title>Proximos</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../page/categoria.html">Categoria</a></li>
-                <li><a href="../page/contacto.html">Contacto</a></li>
-                <li><a href="../page/noticias.html">Noticias</a></li>
-                <li><a class="active" href="../page/proximosLanzamientos.html">Proximos lanzamientos</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navvv">
+            <div class="container-fluid">
+                <ul class="nav nav-pills">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="../page/categoria.html">Categoria</a></li>
+                    <li><a href="../page/contacto.html">Contacto</a></li>
+                    <li><a href="../page/Noticias.html">Noticias</a></li>
+                    <li><a class="active" href="../page/proximosLanzamientos.html">Proximos lanzamientos</a></li>
+                </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              </form>
+            </div>
+          </nav>
         <header>
             <div class="banner">
             </div>
@@ -27,8 +32,17 @@
             </div>
         </header>
         <main>
-            <div class="border-image" >
-                <img src="../media/dedos-vueltas.gif"></img>
+            <div id="grillx">
+                <div class="alert alert-danger alerta" role="alert">
+                   ¡¡ALERTA!!...ERROR
+                   <br> PROXIMAMENTE
+                </div>
+                <div class="cargando">
+                    <button class="btn btn-danger" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                      </button>
+                </div>
             </div>
         </main>       
         <hr>

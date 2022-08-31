@@ -10,15 +10,20 @@
         <title>Inicio</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a class="active" href="/">Inicio</a></li>
-                <li><a href="./page/categoria.html">Categoria</a></li>
-                <li><a href="./page/contacto.html">Contacto</a></li>
-                <li><a href="./page/Noticias.html">Noticias</a></li>
-                <li><a href="./page/proximosLanzamientos.html">Proximos lanzamientos</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navvv">
+            <div class="container-fluid">
+                <ul class="nav nav-pills">
+                    <li><a class="active" href="/">Inicio</a></li>
+                    <li><a href="./page/categoria.html">Categoria</a></li>
+                    <li><a href="./page/contacto.html">Contacto</a></li>
+                    <li><a href="./page/Noticias.html">Noticias</a></li>
+                    <li><a href="./page/proximosLanzamientos.html">Proximos lanzamientos</a></li>
+                </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              </form>
+            </div>
+          </nav>
         <header>
             <div class="banner"></div>
             <div class="title">
@@ -47,78 +52,90 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
-            <!-- <div class="cont__ideas">
-                <div class="idea">
-                    
-                </div>
-                <div class="idea2">
-                    <p>Yuuhi Asamiya es un estudiante universitario cualquiera ante el cual un día aparece un lagarto que le dice que necesita su ayuda para salvar el mundo. Yuuhi descubre que ha obtenido un anillo que le otorga ciertos poderes, pero tras un primer ataque del enemigo se salva de milagro gracias a la intervención de la "princesa" de la que le hablaba el lagarto, quien por cierto, es un caballero. ¡Y la princesa es su vecina! Pero ¿qué planes tiene esta chica, Samidare? Una comedia que combina lo más ordinario con lo más extraño y sobrenatural del mundo.</p>
-                </div>
-            </div> -->
+            </div>
             <div id="grilla">
                 <h2 class="recomendaciones" >Recomendaciones</h2>
                 <div class="gradiente linea"></div>
                 <div class="image-recomendaciones col1 cardd">
                     <div class="face front categoria">
-                        <img src="./media/Rent-a-Girlfriend.jpg" alt="">
-                        <p>titulo</p>
+                        <img src="./media/The Misfit of Demon King Academy.jpg" alt="">
+                        <p>The Misfit of Demon King Academy</p>
                     </div>
                     <div class="face back">
-                        <h3>titulo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos dolorum, quasi voluptatibus iste nam repellat!</p>
+                        <h3>The Misfit of Demon King Academy</h3>
+                        <p>A pesar de su apetito por la destrucción, ¡incluso los reyes demonio se cansan de la sangre y el caos en algunas veces! Cuando Anoth reencarna con la esperanza de una vida más pacífica, termina yendo a una escuela con sus descendientes en su viejo castillo 2,000 años después. Pero con la magia desapareciendo en esta nueva era, y Anoth conservando la suya, ¡¿quién podrá hacerle frente?!</p>
                     </div>
                 </div>
                 <div class="image-recomendaciones col2 cardd">
                     <div class="face front categoria">
-                        <img src="./media/Kimetsu no Yaiba.jpg" alt="">
-                        <p>titulo</p>
+                        <img src="./media/Shigatsu wa Kimi no Uso.jpg" alt="">
+                        <p>Shigatsu wa Kimi no Uso</p>
                     </div>
                     <div class="face back">
-                        <h3>titulo</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam voluptatem delectus tempora ut quod dolore?</p>
+                        <h3>Shigatsu wa Kimi no Uso</h3>
+                        <p>El Prodigio del piano, Arima Kosei dominó la competencia y todos los niños músicos sabían su nombre. Pero luego de que su madre, que a la vez era su instructora, muriera, él tuvo un colapso mental mientras tocaba en un recital que resultó en la incapacidad de poder escuchar el sonido de su piano otra vez, aun cuando no tenía problema alguno de audición. Incluso después de dos años, Kosei no ha tocado el piano y ve al mundo monótono, sin colores.</p>
                     </div>
                 </div>
                 <div class="image-recomendaciones col3 cardd">
                     <div class="face front categoria">
                         <img src="./media/My Teen Romantic Comedy SNAFU.jpg" alt="">
-                        <p>titulo</p>
+                        <p>My Teen Romantic Comedy SNAFU</p>
                     </div>
                     <div class="face back">
-                        <h3>titulo</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident tenetur enim tempore aut illo eum.</p>
+                        <h3>My Teen Romantic Comedy SNAFU</h3>
+                        <p>La comedia romántica gira en torno a un estudiante de instituto bastante antisocial llamado Hachiman Hikigaya y que tiene una distorsionada visión de la vida, aparte de no tener amigos ni mucho menos novia. Cuando ve a sus compañeros de clase hablando alegremente de sus vidas adolescentes, él murmura que son todos una panda de mentirosos.</p>
+                    </div>
+                </div>
+                <div class="image-recomendaciones col4 cardd">
+                    <div class="face front categoria">
+                        <img src="./media/Rent-a-Girlfriend.jpg " alt="">
+                        <p>Rent-a-Girlfriend</p>
+                    </div>
+                    <div class="face back">
+                        <h3>Rent-a-Girlfriend</h3>
+                        <p>En Japón, los solitarios tienen una nueva opción; ¡un servicio online para rentar padres, hijos, e incluso novias! Cuando el amor platónico de Kazuya lo rechaza, él decide que está lo suficientemente desesperado para probar el servicio, y queda impactado cuando descubre lo hermosa que es su novia de alquiler. No obstante, ella quiere mantener su “relación” como un secreto, y hay un problema… ella asiste a su universidad… y sus abuelas viven en la misma casa… ¡y ellos son vecinos! Para su desgracia, Kazuya descubrirá que ella no es tan genial como aparenta…</p>
                     </div>
                 </div>
                 <h2 class="lo__mas__popular">Lo mas popular</h2>
                 <div class="gradientee lineaa"></div>
-                <div class="image-recomendaciones col4 cardd">
-                    <div class="face front categoria">
-                        <img src="./media/My Teen Romantic Comedy SNAFU.jpg" alt="">
-                        <p>titulo</p>
-                    </div>
-                    <div class="face back">
-                        <h3>titulo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi labore quos eligendi maiores, soluta magnam!</p>
-                    </div>
-                </div>
                 <div class="image-recomendaciones col5 cardd">
                     <div class="face front categoria">
-                        <img src="./media/My Teen Romantic Comedy SNAFU.jpg" alt="">
-                        <p>titulo</p>
+                        <img src="./media/Hoshi no Samidare.jpg" alt="">
+                        <p>Hoshi no Samidare</p>
                     </div>
                     <div class="face back">
-                        <h3>titulo</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fuga quam, necessitatibus cumque dolorem officiis?</p>
+                        <h3>Hoshi no Samidare</h3>
+                        <p>Yuuhi Asamiya es un estudiante universitario cualquiera ante el cual un día aparece un lagarto que le dice que necesita su ayuda para salvar el mundo. Yuuhi descubre que ha obtenido un anillo que le otorga ciertos poderes, pero tras un primer ataque del enemigo se salva de milagro gracias a la intervención de la "princesa" de la que le hablaba el lagarto, quien por cierto, es un caballero. ¡Y la princesa es su vecina! Pero ¿qué planes tiene esta chica, Samidare? Una comedia que combina lo más ordinario con lo más extraño y sobrenatural del mundo.</p>
                     </div>
                 </div>
                 <div class="image-recomendaciones col6 cardd">
                     <div class="face front categoria">
-                        <img src="./media/My Teen Romantic Comedy SNAFU.jpg" alt="">
-                        <p>titulo</p>
+                        <img src="./media/The Devil is a Part-Timer!.jpg" alt="">
+                        <p>The Devil is a Part-Timer!</p>
                     </div>
                     <div class="face back">
-                        <h3>titulo</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nemo laborum molestiae minus quo debitis.</p>
+                        <h3>The Devil is a Part-Timer!</h3>
+                        <p>El rey demonio llamado Sadao está a un paso de conquistar su mundo alternativo cuando se transporta al Tokyo de nuestro mundo. Él termina trabajando a tiempo parcial en un restaurante de comida rápida a fin de mes. Con el fin de conquistar Japón, tiene que dar el primer paso y pasar de un empleado temporal a un empleado completo. Mientras tanto, la heroína Emilia llegó a Japón también, en persecución de Sadao.</p>
+                    </div>
+                </div>
+                <div class="image-recomendaciones col7 cardd">
+                    <div class="face front categoria">
+                        <img src="./media/jujutsu kaisen.jpg" alt="">
+                        <p>jujutsu kaisen</p>
+                    </div>
+                    <div class="face back">
+                        <h3>jujutsu kaisen</h3>
+                        <p>Yuuji Itadori es un estudiante de instituto con unas habilidades físicas excepcionales. Todos los días, como rutina, va al hospital a visitar a su abuelo enfermo y decide apuntarse al club de ocultismo del instituto para no dar un palo al agua… Sin embargo, un buen día el sello del talismán que se hallaba escondido en su instituto se rompe, y comienzan a aparecer unos monstruos. Ante este giro de los acontecimientos, Itadori decide adentrarse en el instituto para salvar a sus compañeros. ¿Qué le deparará el destino?</p>
+                    </div>
+                </div>
+                <div class="image-recomendaciones col8 cardd">
+                    <div class="face front categoria">
+                        <img src="./media/Kimetsu no Yaiba.jpg" alt="">
+                        <p>Kimetsu no Yaiba</p>
+                    </div>
+                    <div class="face back">
+                        <h3>Kimetsu no Yaiba</h3>
+                        <p>Estamos en la era Taisho de Japón. Tanjiro, un joven que se gana la vida vendiendo carbón, descubre un día que su familia ha sido asesinada por un demonio. Para empeorar las cosas, su hermana menor Nezuko, la única superviviente de la masacre, ha sufrido una transformación en demonio. Destrozado por los acontecimientos Tanjiro decide convertirse en un cazador de demonios para poder devolver a su hermana a la normalidad y matar al demonio que masacró a su familia.</p>
                     </div>
                 </div>
             </div>
