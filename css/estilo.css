@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:wght@300&family=Rubik+Distressed&display=swap");
 * {
   margin: 0;
   padding: 0; }
@@ -52,10 +53,7 @@ body {
 
 #grilla {
   display: grid;
-  grid-template-areas: "recomendaciones  linea   linea linea"
- "col1 col2 col3 col4"
- "popular lineaa  lineaa lineaa"
- "col5 col6 col7 col8";
+  grid-template-areas: "recomendaciones  linea   linea linea" "col1 col2 col3 col4" "popular lineaa  lineaa lineaa" "col5 col6 col7 col8";
   grid-template-columns: repeat(4, 25%);
   gap: 10px;
   margin-bottom: 250px; }
@@ -103,6 +101,22 @@ body {
       border: 2px;
       border-color: #fff;
       border-style: solid; }
+  #grilla .gradientee {
+    grid-area: lineaa;
+    height: 5px;
+    width: 97%;
+    background: linear-gradient(0deg, #213944, #2abdbb);
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    top: -33px; }
+  #grilla .lo__mas__popular {
+    grid-area: popular;
+    font-family: "Rubik Distressed";
+    font-size: 26px;
+    width: 300;
+    color: #fff;
+    margin: 6%; }
   #grilla .cardd {
     position: relative;
     width: 300px;
@@ -118,8 +132,6 @@ body {
       transition: .5s; }
     #grilla .cardd .front {
       transform: perspective(600px) rotateY(0deg); }
-      #grilla .cardd .front:hover {
-        transform: perspective(600px) rotateY(180deg); }
     #grilla .cardd .back {
       transform: perspective(600px) rotateY(180deg);
       background-color: rgba(0, 0, 0, 0.521);
@@ -128,8 +140,6 @@ body {
       flex-direction: column;
       justify-content: center;
       text-align: center; }
-      #grilla .cardd .back:hover {
-        transform: perspective(600px) rotateY(360deg); }
       #grilla .cardd .back p {
         color: #f3f3f3;
         font-size: 11px;
@@ -145,3 +155,58 @@ body {
       flex-direction: column;
       align-items: center;
       color: #fff; }
+    #grilla .cardd:hover .front {
+      transform: perspective(600px) rotateY(180deg); }
+    #grilla .cardd:hover .back {
+      transform: perspective(600px) rotateY(360deg); }
+
+#grilla2 {
+  display: grid;
+  grid-template-areas: "col1 col2 col3 col4" "col5 col6 col7 col8";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px; }
+  #grilla2 .categoria {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; }
+    #grilla2 .categoria img {
+      height: 300px;
+      width: 200px;
+      border: 3px solid #fff; }
+
+.formularioo {
+  width: 500px;
+  color: #fff; }
+
+#grillaax {
+  display: grid;
+  grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; }
+  #grillaax .noticia1 {
+    grid-area: col1; }
+  #grillaax .noticia2 {
+    grid-area: col2; }
+  #grillaax .noticia3 {
+    grid-area: col3; }
+  #grillaax .noticias4 {
+    grid-area: col4; }
+  #grillaax .noticias5 {
+    grid-area: col5; }
+  #grillaax .noticias6 {
+    grid-area: col6; }
+
+#grillx {
+  display: grid;
+  grid-template-areas: "alerta" "cargando";
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center; }
+  #grillx .alerta__lanzamientos {
+    grid-area: alerta; }
+  #grillx .cargando__lanzamientos {
+    grid-area: cargando; }
