@@ -15,22 +15,19 @@ body {
 }
 /* ----------------------------nav--------------------------- */
 .navvv{
-    position: sticky;
-}
-nav{
     background-color: #333333;
     position: sticky;
     top: 0px;
     z-index: 50;
 }
-nav ul{
+.navvv ul{
     text-align: center;
 }
 dl, ol, ul {
     margin-top: 0;
     margin-bottom: 0;
 }
-nav ul li{
+.navvv ul li{
     display: inline;
     margin-right: 20px;
 }
