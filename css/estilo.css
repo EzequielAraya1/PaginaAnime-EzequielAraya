@@ -16,9 +16,6 @@ body {
     position: sticky;
     top: 0px;
     z-index: 50; }
-    body .navvv dl, body .navvv ol, body .navvv ul {
-      margin-top: 0;
-      margin-bottom: 0; }
     body .navvv ul {
       text-align: center; }
       body .navvv ul li {
@@ -33,6 +30,21 @@ body {
           color: white; }
         body .navvv ul li .active {
           color: #0d6efd; }
+    @media all and (max-width: 500px) {
+      body .navvv .container-fluid .prueba {
+        text-align: center; }
+        body .navvv .container-fluid .prueba li {
+          display: inline;
+          margin-right: 20px; }
+          body .navvv .container-fluid .prueba li a {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white; }
+          body .navvv .container-fluid .prueba li .active {
+            color: #0d6efd; } }
   body header .banner {
     background-image: url(../media/banner-animes.jpg);
     width: 100%;
@@ -48,7 +60,21 @@ body {
     text-align: center;
     text-shadow: 0px 0px 5px #000;
     background-color: #333333; }
-  body .bgFooter {
+  @media all and (max-width: 500px) {
+    body header .banner {
+      background-image: url(../media/banner-animes.jpg);
+      width: 100%;
+      height: 100px;
+      background-position-y: center; }
+      body header .banner p {
+        font-family: "rubik";
+        font-size: 42px;
+        font-weight: 300;
+        color: #1568a7;
+        text-align: center;
+        padding-top: 90px;
+        text-shadow: 0px 0px 5px #000; } }
+  body header .bgFooter {
     background-color: #333333; }
 
 #grilla {
@@ -159,6 +185,65 @@ body {
       transform: perspective(600px) rotateY(180deg); }
     #grilla .cardd:hover .back {
       transform: perspective(600px) rotateY(360deg); }
+  @media screen and (max-width: 1024px) {
+    #grilla .recomendaciones {
+      font-family: "lobster", sans-serif;
+      font-size: 26px;
+      width: 300;
+      color: #1568a7;
+      margin: 5%;
+      margin-top: -100px; }
+    #grilla .image-recomendaciones {
+      display: inline-flex;
+      justify-content: center;
+      width: 300px;
+      height: 300px; }
+      #grilla .image-recomendaciones img {
+        margin-right: 10px;
+        margin-left: 130px;
+        margin-bottom: 25px;
+        border: 5px solid #000; }
+    #grilla .categoria {
+      margin-top: 50px;
+      margin-bottom: 100px;
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 300px; }
+      #grilla .categoria img {
+        margin-right: 10px;
+        display: inline;
+        border: 3px solid #000;
+        height: 400px;
+        width: 200px; } }
+  @media screen and (max-width: 500px) {
+    #grilla .image-recomendaciones {
+      display: inline-flex;
+      justify-content: center;
+      width: 100px;
+      height: 200px;
+      margin-left: -30px;
+      margin-right: 20px; }
+      #grilla .image-recomendaciones img {
+        margin-bottom: 25px;
+        border: 3px solid #000; }
+    #grilla .recomendaciones {
+      font-family: "lobster", sans-serif;
+      font-size: 18px;
+      width: 300;
+      color: #1568a7;
+      margin: 5%;
+      margin-top: -100px; }
+    #grilla .categoria {
+      margin-top: -50px;
+      margin-left: 30px;
+      margin-bottom: 50px; }
+      #grilla .categoria img {
+        margin-right: 50px;
+        display: inline-flex;
+        border: 3px solid #000;
+        height: 200px;
+        width: 150px; } }
 
 #grilla2 {
   display: grid;
