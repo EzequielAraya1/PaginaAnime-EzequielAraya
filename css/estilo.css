@@ -79,7 +79,10 @@ body {
 
 #grilla {
   display: grid;
-  grid-template-areas: "recomendaciones  linea   linea linea" "col1 col2 col3 col4" "popular lineaa  lineaa lineaa" "col5 col6 col7 col8";
+  grid-template-areas: "recomendaciones  linea   linea linea"
+ "col1 col2 col3 col4"
+ "popular lineaa  lineaa lineaa"
+ "col5 col6 col7 col8";
   grid-template-columns: repeat(4, 25%);
   gap: 10px;
   margin-bottom: 250px; }
@@ -103,7 +106,7 @@ body {
     grid-area: recomendaciones;
     font-family: "Rubik Distressed";
     font-size: 26px;
-    width: 300;
+    font-weight: 300;
     color: #fff;
     margin: 6%;
     margin-top: 90px; }
@@ -185,38 +188,54 @@ body {
       transform: perspective(600px) rotateY(180deg); }
     #grilla .cardd:hover .back {
       transform: perspective(600px) rotateY(360deg); }
-  @media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 500px) {
+  #grilla {
+    display: grid;
+    grid-template-areas: "recomendaciones linea"
+ "col1 col2"
+ "col3 col4"
+ "popular lineaa"
+ "col5 col6"
+ "col7 col8";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    justify-items: center;
+    align-items: center; }
+    #grilla .col1 {
+      grid-area: col1; }
+    #grilla .col2 {
+      grid-area: col2; }
+    #grilla .col3 {
+      grid-area: col3; }
+    #grilla .col4 {
+      grid-area: col4; }
+    #grilla .col5 {
+      grid-area: col5; }
+    #grilla .col6 {
+      grid-area: col6; }
+    #grilla .col7 {
+      grid-area: col7; }
+    #grilla .col8 {
+      grid-area: col8; }
     #grilla .recomendaciones {
-      font-family: "lobster", sans-serif;
-      font-size: 26px;
-      width: 300;
-      color: #1568a7;
-      margin: 5%;
-      margin-top: -100px; }
-    #grilla .image-recomendaciones {
-      display: inline-flex;
-      justify-content: center;
-      width: 300px;
-      height: 300px; }
-      #grilla .image-recomendaciones img {
-        margin-right: 10px;
-        margin-left: 130px;
-        margin-bottom: 25px;
-        border: 5px solid #000; }
-    #grilla .categoria {
-      margin-top: 50px;
-      margin-bottom: 100px;
-      display: inline-flex;
-      justify-content: center;
-      flex-direction: column;
-      height: 300px; }
-      #grilla .categoria img {
-        margin-right: 10px;
-        display: inline;
-        border: 3px solid #000;
-        height: 400px;
-        width: 200px; } }
-  @media screen and (max-width: 500px) {
+      grid-area: recomendaciones;
+      font-family: "Rubik Distressed";
+      font-size: 14px;
+      font-weight: 300;
+      color: #fff;
+      margin-top: 20px;
+      margin-right: 65px; }
+    #grilla .gradiente {
+      grid-area: linea;
+      height: 4px;
+      width: 130%;
+      background: linear-gradient(0deg, #fab818, #ef4323);
+      display: flex;
+      align-self: flex-end;
+      position: relative;
+      margin-right: 88px;
+      margin-top: 68px; }
     #grilla .image-recomendaciones {
       display: inline-flex;
       justify-content: center;
@@ -227,31 +246,219 @@ body {
       #grilla .image-recomendaciones img {
         margin-bottom: 25px;
         border: 3px solid #000; }
-    #grilla .recomendaciones {
-      font-family: "lobster", sans-serif;
-      font-size: 18px;
-      width: 300;
-      color: #1568a7;
-      margin: 5%;
-      margin-top: -100px; }
+    #grilla .gradientee {
+      grid-area: lineaa;
+      height: 4px;
+      width: 135%;
+      background: linear-gradient(0deg, #213944, #2abdbb);
+      display: flex;
+      align-self: flex-end;
+      position: relative;
+      margin-right: 105px;
+      margin-top: 65px; }
+    #grilla .lo__mas__popular {
+      grid-area: popular;
+      font-family: "Rubik Distressed";
+      font-size: 14px;
+      font-weight: 300;
+      color: #fff;
+      margin-right: 75px;
+      margin-top: 20px; }
+    #grilla .cardd {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      z-index: 1;
+      background-color: none; }
+      #grilla .cardd .face {
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        backface-visibility: hidden;
+        overflow: hidden;
+        transition: .5s; }
+      #grilla .cardd .front {
+        transform: perspective(600px) rotateY(0deg); }
+      #grilla .cardd .back {
+        transform: perspective(600px) rotateY(180deg);
+        background-color: rgba(0, 0, 0, 0.521);
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center; }
+        #grilla .cardd .back p {
+          color: #f3f3f3;
+          font-size: 8px;
+          font-weight: 500; }
+        #grilla .cardd .back h3 {
+          font-size: 14px;
+          font-weight: 500;
+          position: relative;
+          margin-top: 100px;
+          color: #f3f3f3;
+          text-decoration: underline; }
+      #grilla .cardd:hover .front {
+        transform: perspective(600px) rotateY(180deg); }
+      #grilla .cardd:hover .back {
+        transform: perspective(600px) rotateY(360deg); }
     #grilla .categoria {
-      margin-top: -50px;
-      margin-left: 30px;
-      margin-bottom: 50px; }
+      display: flex;
+      justify-content: center;
+      align-items: center; }
       #grilla .categoria img {
-        margin-right: 50px;
         display: inline-flex;
         border: 3px solid #000;
         height: 200px;
         width: 150px; } }
 
+@media screen and (max-width: 1024px) {
+  #grilla {
+    display: grid;
+    grid-template-areas: "recomendaciones linea"
+ "col1 col2"
+ "col3 col4"
+ "popular lineaa"
+ "col5 col6"
+ "col7 col8";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    justify-items: center;
+    align-items: center; }
+    #grilla .col1 {
+      grid-area: col1; }
+    #grilla .col2 {
+      grid-area: col2; }
+    #grilla .col3 {
+      grid-area: col3; }
+    #grilla .col4 {
+      grid-area: col4; }
+    #grilla .col5 {
+      grid-area: col5; }
+    #grilla .col6 {
+      grid-area: col6; }
+    #grilla .col7 {
+      grid-area: col7; }
+    #grilla .col8 {
+      grid-area: col8; }
+    #grilla .recomendaciones {
+      grid-area: recomendaciones;
+      font-family: "Rubik Distressed";
+      font-size: 20px;
+      font-weight: 300;
+      color: #fff;
+      margin-top: 20px;
+      margin-right: 65px; }
+    #grilla .gradiente {
+      grid-area: linea;
+      height: 4px;
+      width: 130%;
+      background: linear-gradient(0deg, #fab818, #ef4323);
+      display: flex;
+      align-self: flex-end;
+      position: relative;
+      margin-right: 150px;
+      margin-top: 68px; }
+    #grilla .image-recomendaciones {
+      display: inline-flex;
+      justify-content: center;
+      width: 200px;
+      height: 400px;
+      margin-left: -30px;
+      margin-right: 20px; }
+      #grilla .image-recomendaciones img {
+        margin-bottom: 25px;
+        border: 3px solid #000; }
+    #grilla .gradientee {
+      grid-area: lineaa;
+      height: 4px;
+      width: 135%;
+      background: linear-gradient(0deg, #213944, #2abdbb);
+      display: flex;
+      align-self: flex-end;
+      position: relative;
+      margin-right: 165px;
+      margin-top: 65px; }
+    #grilla .lo__mas__popular {
+      grid-area: popular;
+      font-family: "Rubik Distressed";
+      font-size: 20px;
+      font-weight: 300;
+      color: #fff;
+      margin-right: 75px;
+      margin-top: 20px; }
+    #grilla .cardd {
+      position: relative;
+      width: 200px;
+      height: 400px;
+      z-index: 1;
+      background-color: none; }
+      #grilla .cardd .face {
+        position: absolute;
+        width: 200px;
+        height: 400px;
+        backface-visibility: hidden;
+        overflow: hidden;
+        transition: .5s; }
+      #grilla .cardd .front {
+        transform: perspective(600px) rotateY(0deg); }
+      #grilla .cardd .back {
+        transform: perspective(600px) rotateY(180deg);
+        background-color: rgba(0, 0, 0, 0.521);
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center; }
+        #grilla .cardd .back p {
+          color: #f3f3f3;
+          font-size: 8px;
+          font-weight: 500; }
+        #grilla .cardd .back h3 {
+          font-size: 14px;
+          font-weight: 500;
+          position: relative;
+          margin-top: 100px;
+          color: #f3f3f3;
+          text-decoration: underline; }
+      #grilla .cardd:hover .front {
+        transform: perspective(600px) rotateY(180deg); }
+      #grilla .cardd:hover .back {
+        transform: perspective(600px) rotateY(360deg); }
+    #grilla .categoria {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #grilla .categoria img {
+        display: inline-flex;
+        border: 3px solid #000;
+        height: 500px;
+        width: 200px; } }
+
 #grilla2 {
   display: grid;
-  grid-template-areas: "col1 col2 col3 col4" "col5 col6 col7 col8";
+  grid-template-areas: "col1 col2 col3 col4"
+ "col5 col6 col7 col8";
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   margin: 20px; }
+  #grilla2 .col1 {
+    grid-area: col1; }
+  #grilla2 .col2 {
+    grid-area: col2; }
+  #grilla2 .col3 {
+    grid-area: col3; }
+  #grilla2 .col4 {
+    grid-area: col4; }
+  #grilla2 .col5 {
+    grid-area: col5; }
+  #grilla2 .col6 {
+    grid-area: col6; }
+  #grilla2 .col7 {
+    grid-area: col7; }
+  #grilla2 .col8 {
+    grid-area: col8; }
   #grilla2 .categoria {
     display: flex;
     justify-content: center;
@@ -263,13 +470,49 @@ body {
       width: 200px;
       border: 3px solid #fff; }
 
-.formularioo {
-  width: 500px;
-  color: #fff; }
+@media screen and (max-width: 500px) {
+  #grilla2 {
+    display: grid;
+    grid-template-areas: "col1 col2"
+ "col3 col4"
+ "col5 col6"
+ "col7 col8";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px; }
+  .col1 {
+    grid-area: col1; }
+  .col2 {
+    grid-area: col2; }
+  .col3 {
+    grid-area: col3; }
+  .col4 {
+    grid-area: col4; }
+  .col5 {
+    grid-area: col5; }
+  .col6 {
+    grid-area: col6; }
+  .col7 {
+    grid-area: col7; }
+  .col8 {
+    grid-area: col8; } }
+
+#griilla3 {
+  display: grid;
+  grid-template-areas: "col1";
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  justify-items: center; }
+  #griilla3 .grilla__formulario {
+    grid-area: col1; }
+  #griilla3 .formularioo {
+    width: 500px;
+    color: #fff; }
 
 #grillaax {
   display: grid;
-  grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+  grid-template-areas: "col1 col2 col3"
+ "col4 col5 col6";
   grid-template-columns: repeat(3, 1fr);
   gap: 10px; }
   #grillaax .noticia1 {
@@ -287,7 +530,8 @@ body {
 
 #grillx {
   display: grid;
-  grid-template-areas: "alerta" "cargando";
+  grid-template-areas: "alerta"
+ "cargando";
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center; }

@@ -1,4 +1,13 @@
- .formularioo {
+ #griilla3 {
+    display: grid;
+    grid-template-areas:"col1";
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+    .grilla__formulario{grid-area: col1;}
+    .formularioo {
         width: 500px;
         color: #fff;
     }
+ }
+ 
