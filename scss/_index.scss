@@ -19,7 +19,7 @@
         grid-area: recomendaciones;
         font-family: "Rubik Distressed";
         font-size: 26px;
-       font-weight: 300;
+        font-weight: 300;
         color: #fff;
         margin: 6%;
         margin-top: 90px;
@@ -48,14 +48,9 @@
         }
     }
     .gradientee {
+        @extend .gradiente;
         grid-area: lineaa;
-        height: 5px;
-        width: 97%;
         background: linear-gradient(0deg,#213944,#2abdbb);
-        display: flex;
-        align-self: flex-end;
-        position: relative;
-        top: -33px;
     }
     .lo__mas__popular {
         grid-area: popular;

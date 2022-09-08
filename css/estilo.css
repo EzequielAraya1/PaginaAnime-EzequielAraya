@@ -7,10 +7,10 @@
   box-sizing: none; }
 
 body {
-  background: #0a0a0a;
+  background: #000;
   background: linear-gradient(0deg, #1d1f1f 0%, black 100%);
   line-height: 1;
-  color: #030303; }
+  color: #000; }
   body .navvv {
     background-color: #333333;
     position: sticky;
@@ -27,7 +27,7 @@ body {
           font-weight: 300;
           text-decoration: none;
           text-transform: uppercase;
-          color: white; }
+          color: #ffff; }
         body .navvv ul li .active {
           color: #0d6efd; }
     @media all and (max-width: 500px) {
@@ -56,7 +56,7 @@ body {
     font-family: "Rubik Distressed";
     font-size: 36px;
     font-weight: 300;
-    color: #fff;
+    color: #ffff;
     text-align: center;
     text-shadow: 0px 0px 5px #000;
     background-color: #333333; }
@@ -75,14 +75,11 @@ body {
         padding-top: 90px;
         text-shadow: 0px 0px 5px #000; } }
   body header .bgFooter {
-    background-color: #333333; }
+    background-color: #0d6efd; }
 
 #grilla {
   display: grid;
-  grid-template-areas: "recomendaciones  linea   linea linea"
- "col1 col2 col3 col4"
- "popular lineaa  lineaa lineaa"
- "col5 col6 col7 col8";
+  grid-template-areas: "recomendaciones  linea   linea linea" "col1 col2 col3 col4" "popular lineaa  lineaa lineaa" "col5 col6 col7 col8";
   grid-template-columns: repeat(4, 25%);
   gap: 10px;
   margin-bottom: 250px; }
@@ -110,7 +107,7 @@ body {
     color: #fff;
     margin: 6%;
     margin-top: 90px; }
-  #grilla .gradiente {
+  #grilla .gradiente, #grilla .gradientee {
     grid-area: linea;
     height: 5px;
     width: 95%;
@@ -132,13 +129,7 @@ body {
       border-style: solid; }
   #grilla .gradientee {
     grid-area: lineaa;
-    height: 5px;
-    width: 97%;
-    background: linear-gradient(0deg, #213944, #2abdbb);
-    display: flex;
-    align-self: flex-end;
-    position: relative;
-    top: -33px; }
+    background: linear-gradient(0deg, #213944, #2abdbb); }
   #grilla .lo__mas__popular {
     grid-area: popular;
     font-family: "Rubik Distressed";
@@ -192,12 +183,7 @@ body {
 @media screen and (max-width: 500px) {
   #grilla {
     display: grid;
-    grid-template-areas: "recomendaciones linea"
- "col1 col2"
- "col3 col4"
- "popular lineaa"
- "col5 col6"
- "col7 col8";
+    grid-template-areas: "recomendaciones linea" "col1 col2" "col3 col4" "popular lineaa" "col5 col6" "col7 col8";
     grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     justify-items: center;
@@ -226,7 +212,7 @@ body {
       color: #fff;
       margin-top: 20px;
       margin-right: 65px; }
-    #grilla .gradiente {
+    #grilla .gradiente, #grilla .gradientee {
       grid-area: linea;
       height: 4px;
       width: 130%;
@@ -315,12 +301,7 @@ body {
 @media screen and (max-width: 1024px) {
   #grilla {
     display: grid;
-    grid-template-areas: "recomendaciones linea"
- "col1 col2"
- "col3 col4"
- "popular lineaa"
- "col5 col6"
- "col7 col8";
+    grid-template-areas: "recomendaciones linea" "col1 col2" "col3 col4" "popular lineaa" "col5 col6" "col7 col8";
     grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     justify-items: center;
@@ -349,7 +330,7 @@ body {
       color: #fff;
       margin-top: 20px;
       margin-right: 65px; }
-    #grilla .gradiente {
+    #grilla .gradiente, #grilla .gradientee {
       grid-area: linea;
       height: 4px;
       width: 130%;
@@ -437,8 +418,7 @@ body {
 
 #grilla2 {
   display: grid;
-  grid-template-areas: "col1 col2 col3 col4"
- "col5 col6 col7 col8";
+  grid-template-areas: "col1 col2 col3 col4" "col5 col6 col7 col8";
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
@@ -473,10 +453,7 @@ body {
 @media screen and (max-width: 500px) {
   #grilla2 {
     display: grid;
-    grid-template-areas: "col1 col2"
- "col3 col4"
- "col5 col6"
- "col7 col8";
+    grid-template-areas: "col1 col2" "col3 col4" "col5 col6" "col7 col8";
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin: 20px; }
@@ -511,8 +488,7 @@ body {
 
 #grillaax {
   display: grid;
-  grid-template-areas: "col1 col2 col3"
- "col4 col5 col6";
+  grid-template-areas: "col1 col2 col3" "col4 col5 col6";
   grid-template-columns: repeat(3, 1fr);
   gap: 10px; }
   #grillaax .noticia1 {
@@ -530,8 +506,7 @@ body {
 
 #grillx {
   display: grid;
-  grid-template-areas: "alerta"
- "cargando";
+  grid-template-areas: "alerta" "cargando";
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center; }
