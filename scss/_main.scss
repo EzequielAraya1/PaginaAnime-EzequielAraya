@@ -11,6 +11,9 @@ body {
     background: linear-gradient(0deg, rgb(29, 31, 31) 0%, rgb(0, 0, 0) 100%);
     line-height: 1;
     color: map-get($colores,"negro");
+    .menu__hamburguesa{
+        display: none;
+    }
     .navvv{
         background-color: map-get($colores,"gris-negro");
         position: sticky;
@@ -56,6 +59,7 @@ body {
                 }
             }
         }
+        
     }
 
     header {
