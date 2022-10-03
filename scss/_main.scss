@@ -11,56 +11,173 @@ body {
     background: linear-gradient(0deg, rgb(29, 31, 31) 0%, rgb(0, 0, 0) 100%);
     line-height: 1;
     color: map-get($colores,"negro");
-    .menu__hamburguesa{
-        display: none;
-    }
-    .navvv{
-        background-color: map-get($colores,"gris-negro");
-        position: sticky;
-        top: 0px;
-        z-index: 50;
-        ul{
-            text-align: center;
-            li{
-                display: inline;
-                margin-right: 20px;
-                a{
-                    font-family: 'Nunito Sans', sans-serif;
-                    font-size: 22px;
-                    font-weight: 300;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    color: map-get($colores,"blanco");
-                }
-                .active{
-                    color: #0d6efd;
-                }
-            }
+    .navv__general{
+        .menu__prueba{
+            display: none;
         }
-        @media all and (max-width: 500px){
-            .container-fluid{
-                .prueba{
+        .menu__prueba2{
+            .navvv{
+                background-color: map-get($colores,"gris-negro");
+                position: sticky;
+                top: 0px;
+                z-index: 50;
+                ul{
                     text-align: center;
                     li{
                         display: inline;
                         margin-right: 20px;
                         a{
                             font-family: 'Nunito Sans', sans-serif;
-                            font-size: 12px;
+                            font-size: 22px;
                             font-weight: 300;
                             text-decoration: none;
                             text-transform: uppercase;
-                            color: white;
+                            color: map-get($colores,"blanco");
                         }
                         .active{
                             color: #0d6efd;
                         }
                     }
                 }
+                
+            }
+            
+
+            
+        }
+        @media screen and (max-width: 850px){
+            .menu__prueba2{
+                display: none;
+            }
+            .menu__prueba{
+                display: block;
+                .nav__color__fondo{
+                    background-color: map-get($colores,"gris-negro");;
+                    li{
+                    list-style: none;
+                        .letrademierda{
+                            list-style: none;
+                            color: #fff;
+                            font-family: "Rubik Distressed";
+                            font-size: 24px;
+                            font-weight: 300;
+                            text-decoration: none;
+                            .activo{
+                                color: #000;
+                            }
+                        }
+                    }   
+                }
+                
+                .nav__color{
+                    background-color: map-get($colores,"gris-negro");;
+                    .nav__color2{
+                            background-color: map-get($colores,"gris-negro");;
+                            .nav__titulo{
+                                font-family: "Rubik Distressed";
+                                font-size: 32px;
+                                font-weight: 300;
+                                color: map-get($colores,"blanco");
+                                justify-content: center;
+                                text-align: center;
+                                text-shadow: 0px 0px 5px #000;
+                                background-color: map-get($colores,"gris-negro");;
+                            }
+                        }
+                    
+                }
             }
         }
-        
+        @media screen and (max-width: 500px){
+            .menu__prueba2{
+                display: none;
+            }
+            .menu__prueba{
+                display: block;
+                .nav__color__fondo{
+                    background-color: map-get($colores,"gris-negro");;
+                    li{
+                    list-style: none;
+                        .letrademierda{
+                            list-style: none;
+                            color: #fff;
+                            font-family: "Rubik Distressed";
+                            font-size: 24px;
+                            font-weight: 300;
+                            text-decoration: none;
+                            .activo{
+                                color: #000;
+                            }
+                        }
+                    }   
+                }
+                
+                .nav__color{
+                    background-color: map-get($colores,"gris-negro");;
+                    .nav__color2{
+                            background-color: map-get($colores,"gris-negro");;
+                            .nav__titulo{
+                                font-family: "Rubik Distressed";
+                                font-size: 32px;
+                                font-weight: 300;
+                                color: map-get($colores,"blanco");
+                                justify-content: center;
+                                text-align: center;
+                                text-shadow: 0px 0px 5px #000;
+                                background-color: map-get($colores,"gris-negro");;
+                            }
+                        }
+                    
+                }
+            }
+        }
+         @media screen and (max-width: 320px){
+            .menu__prueba2{
+                display: none;
+            }
+            .menu__prueba{
+                display: block;
+                .nav__color__fondo{
+                    background-color: map-get($colores,"gris-negro");;
+                    li{
+                    list-style: none;
+                        .letrademierda{
+                            list-style: none;
+                            color: #fff;
+                            font-family: "Rubik Distressed";
+                            font-size: 14px;
+                            font-weight: 300;
+                            text-decoration: none;
+                            .activo{
+                                color: #000;
+                            }
+                        }
+                    }   
+                }
+                
+                .nav__color{
+                    background-color: map-get($colores,"gris-negro");;
+                    .nav__color2{
+                            background-color: map-get($colores,"gris-negro");;
+                            .nav__titulo{
+                                font-family: "Rubik Distressed";
+                                font-size: 14px;
+                                font-weight: 300;
+                                color: map-get($colores,"blanco");
+                                justify-content: center;
+                                text-align: center;
+                                text-shadow: 0px 0px 5px #000;
+                                background-color: map-get($colores,"gris-negro");;
+                            }
+                        }
+                    
+                }
+            }
+        }
     }
+        
+    
+        
 
     header {
         .banner{
@@ -69,7 +186,7 @@ body {
             height: 200px;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position-y: -100px;
+            background-position-y: center;
         }
         .title {
             font-family: "Rubik Distressed";
@@ -97,8 +214,10 @@ body {
                 }
         }
         }
+       
         .bgFooter {
             background-color: map-get($colores,"azul");
         }
     }
 }
+ 
