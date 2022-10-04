@@ -1,4 +1,4 @@
- #griilla3 {
+#griilla3 {
     display: grid;
     grid-template-areas:"col1";
     grid-template-columns: repeat(1, 1fr);
@@ -9,5 +9,18 @@
         width: 500px;
         color: #fff;
     }
- }
+    @media all and (max-width:520px){
+        .formularioo {
+            width: 300px;
+            color: #fff;
+        }
+    }
+    @media all and (max-width: 320px){
+        .formularioo {
+            width: 200px;
+            color: #fff;
+        }
+    }
+}
+
  
